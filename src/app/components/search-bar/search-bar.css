@@ -1,0 +1,39 @@
+.container {
+  background-color: #111;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 24px 18px;
+}
+
+label {
+  color: #f5c518;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input {
+  background: transparent;
+  border: 0;
+  color: white;
+  font: inherit;
+  min-width: 0;
+  outline: none;
+}
+
+.search-container {
+  align-items: center;
+  border: 1px solid #f5c518;
+  border-radius: 4px;
+  display: flex;
+  max-width: 100%;
+  padding: 8px 12px;
+  width: 340px;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+fa-icon {
+  color: #f5c518;
+}
