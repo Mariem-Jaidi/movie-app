@@ -1,6 +1,6 @@
 <div class="container">
-    @for(movie of movieService.movieList; track movie.id) {
-        <div class="movie-card">
+    @for(movie of movieService.movieList(); track movie.id) {
+        <div class="movie-card" (click)="navigateTo(movie)">
             <div>
                 <img src="https://image.tmdb.org/t/p/original{{ movie.poster_path }}" [alt]="movie.title">
             </div>

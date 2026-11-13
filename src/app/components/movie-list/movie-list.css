@@ -9,7 +9,20 @@
   background-color: white;
   border-bottom: 4px solid #f5c518;
   border-radius: 4px;
+  cursor: pointer;
   overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.movie-card:hover {
+  box-shadow: 0 8px 18px rgb(0 0 0 / 15%);
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .movie-card {
+    transition: none;
+  }
 }
 
 .movie-card img {

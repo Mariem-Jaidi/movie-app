@@ -1,1 +1,19 @@
-<p>wish-list works!</p>
+<div class="container">
+  <h2>My wishlist</h2>
+
+  @if (movieService.wishList().length === 0) {
+    <p>Your wishlist is empty.</p>
+  } @else {
+    <div class="movie-list">
+      @for (movie of movieService.wishList(); track movie.id) {
+        <div class="movie-card">
+          <img [src]="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" [alt]="movie.title" />
+          <div class="movie-info">
+            <h3>{{ movie.title }}</h3>
+            <p>{{ movie.release_date }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>
